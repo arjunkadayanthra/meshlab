@@ -1,4 +1,4 @@
-##  IT Performance Analysis
+##  IT Performance Analysis - Team 5 (Arjun Vishnu Prakash , Eldhose Paul)
 
 
 ###  Table of Contents
@@ -36,7 +36,7 @@
 ###  3.  Experiment Specification
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol.   
 ###  4.  Data Analysis
-   For performance analysis we use python script. Mean, median and standard deviations are the numerical measurements that we have used.
+   For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. 
 ###  5.  Plottting results
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques. Based on the calculated numerical measures, we then plot the aggregated statistical measures into a box plot for performance comparison.
 ###  6.  Results
@@ -44,9 +44,5 @@
 ###  7.  Conclusions
    * Justification
 
-|x1|c1|c2|c3|
-|-|-|-|-|
-|1. |r1|r1|r1|
-|3. |r2|r2|r2|
-|1. |r1|r1|r1|
+
 
