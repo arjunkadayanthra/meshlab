@@ -14,7 +14,8 @@
 
 ### 1. Problem Definition <a id="problemdefinition"></a>
 
-  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through the router [TP-Link WDR4900 v1](https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip) access point (hereafter referenced as `device`). <br>
+  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through the router [TP-Link WDR4900 v1](https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip) access point (hereafter referenced as `device`).
+
   * Four packet processing and forwarding techniques are considered in our experiment:-
 
    ####  a. IP forwarding:
@@ -35,7 +36,7 @@ Extended Berkeley Packet Filter (eBPF) when used with Traffic Control (TC), prov
 
 ### 2.  Environment Setup <a id="envirsetup"></a>
 
-* The `controller` (named as `one-to-rule-them-all` or Muxer) for the whole setup is a regular x86_64-based Desktop-PC (with a Intel i5 750 (4) @ 2.661GHz CPU) , running  on OpenWrt linux distribution ( SNAPSHOT, r24403+283-c23b509d72) and  also as a point of access. The controller has a 10-Gigabit connection to the switch.<br><br>
+* The `controller` (named as `one-to-rule-them-all` or Muxer) for the whole setup is a regular x86_64-based Desktop-PC (with a Intel i5 750 (4) @ 2.661GHz CPU) , running  on OpenWrt linux distribution ( SNAPSHOT, r24403+283-c23b509d72) and  also as a point of access. The controller has a 10-Gigabit connection to the switch.<br>
 
 * The `device` is connected with two cables to the same switch to which the controller is also connected, thus they are in a network. To separate all the other devices and it's networks from each other, they are grouped into VLANs. The controller has access to all of these VLANs, and thus has a connection to the `device` (using a virtual interface). Every connection between a `device` and the controller gets its own unique set of IP addresses, and there’s a list that shows which of these addresses are used by the devices and the controller’s virtual interfaces.<br>
 
@@ -58,7 +59,7 @@ Extended Berkeley Packet Filter (eBPF) when used with Traffic Control (TC), prov
   
 ### 3. Error Discussion <a id="errdiscuss"></a>
 
-The following are the possible errors during this setup and and operation.<br>
+The following are the possible errors during this setup and and operation
 
 #### Systematic Errors: 
 
@@ -66,13 +67,13 @@ The following are the possible errors during this setup and and operation.<br>
   * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.<br>
   * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.
      
-#### Random Errors:<br><br>
+#### Random Errors:<br>
 
   * Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample isn’t a good representation of the whole.<br>
   * Time Troubles: The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.<br>
   * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.
      
-#### Other Potential Errors:<br><br>
+#### Other Potential Errors:<br>
 
   * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
   * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
