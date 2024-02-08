@@ -1,7 +1,7 @@
 ##  IT Performance Analysis - Team 5 (Arjun Vishnu Prakash , Eldhose Paul)
 
 
-###  Table of Contents
+##  Table of Contents
 1.  [Problem definition](#problemdefinition)
 2.  [Environment Setup](#envirsetup)
 3.  [Error Discussion](#errdiscuss)
@@ -13,25 +13,25 @@
 9.  [Conclusions](#conclusion)
 
 
-<h3> 1. Problem Definition <a id="problemdefinition"></a></h3>
+## 1. Problem Definition <a id="problemdefinition"></a>
 <p style="text-align: justify;">
   * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a [TP-Link WDR4900 v1](https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip) access point (hereafter referenced as `device`).<br><br>
   * Four packet processing and forwarding techniques are considered in our experiment:-
 </p>
-<h4> IP forwarding:</h4>
+### IP forwarding:
 <p style="text-align: justify;">
       This is a basic method where a system (usually a router) sends incoming packets to another network based on the destination IP address.</p>
-<h4>  - IP forwarding with software offloading:</h4>
+###  - IP forwarding with software offloading:
 <p style="text-align: justify;">
         This technique enhances performance by offloading some data forwarding tasks from the CPU to a more efficient part of the system.</p>
-<h4>  - IP forwarding with hardware offloading:</h4>
+###  - IP forwarding with hardware offloading:
 <p style="text-align: justify;">
       This method improves transmission performance by offloading certain data forwarding tasks from the software to the hardware, allowing for faster packet routing.</p>
-<h4>  - eBPF (TC):</h4>
+###  - eBPF (TC):
 <p style="text-align: justify;">
       eBPF, when used with Traffic Control (TC) provides a flexible platform for executing programs in the kernel space, allowing for fast packet processing and forwarding.
 </p>
-<h3> 2.  Environment Setup <a id="envirsetup"></a></h3>
+## 2.  Environment Setup <a id="envirsetup"></a>
 <p style="text-align: justify;">
    * The controller (named as `one-to-rule-them-all` or Muxer) for the whole setup is a regular x86_64-based Desktop-PC (with a Intel i5 750 (4) @ 2.661GHz CPU) , running  on OpenWrt linux distribution ( SNAPSHOT, r24403+283-c23b509d72) and  also as a point of access. The controller has a 10-Gigabit connection to the switch.<br><br>
 </p>
@@ -59,34 +59,34 @@
   <p align="center">
   <img src="IT.drawio.png" alt="GitHub Image">
   </p>
-<h3> 3. Error Discussion <a id="errdiscuss"></a></h3>
+## 3. Error Discussion <a id="errdiscuss"></a>
 The following are the possible errors during this setup and and operation.<br>
-<h4>Systematic Errors:<br></h4>
+### Systematic Errors:<br>
      * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.<br>
      * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.<br>
      * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.<br>
-<h4>Random Errors:<br><br></h4>
+### Random Errors:<br><br>
      * Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample isn’t a good representation of the whole.<br>
      * Time Troubles: The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.<br>
      * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.<br><br>
-<h4>Other Potential Errors:<br><br></h4>
+### Other Potential Errors:<br><br>
      * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
      * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
-<h3> 4.  Confidence Analysis <a id="confianalysis"></a></h3>
+## 4.  Confidence Analysis <a id="confianalysis"></a>
 
-<h3> 5.  Experiment Specification <a id="expspecifi"></a></h3>
+## 5.  Experiment Specification <a id="expspecifi"></a>
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol. You can access the collected `tcpdump` output files [here](https://zenodo.org/uploads/new)
   <br> 
-<h3> 6.  Data Analysis <a id="dataanalysis"></a></h3>
+## 6.  Data Analysis <a id="dataanalysis"></a>
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. <br>
    The script that we used are displayed below and also access those files with this link.[Link Text](https://www.example.com)
-<h3> 7.  Plottting results <a id="plotresults"></a></h3>
+## 7.  Plottting results <a id="plotresults"></a>
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.<br>
    
-<h3> 8.  Results <a id="results"></a></h3>
+## 8.  Results <a id="results"></a>
   
-<h3> 9.  Conclusions <a id="conclusion"></a></h3>
+## 9.  Conclusions <a id="conclusion"></a>
    * Justification
 
 
