@@ -21,7 +21,6 @@
 
    Internet Protocol (IP) forwarding is a fundamental process where a system, typically a router, forwards incoming data packets to another network based on the destination IP address. This is essential for routing data across networks and is the basis of how data gets from its source to its destination over the internet.
 
-
    ####  b. IP forwarding with software offloading:
 
 This technique enhances network performance by offloading some data forwarding tasks from the Central Processing Unit (CPU) to a more efficient part of the system. This could be another processor or a dedicated part of the CPU that is designed to handle these tasks more efficiently. By offloading these tasks, the CPU is freed up to handle other tasks, improving overall system performance.
@@ -34,9 +33,7 @@ This method further improves network transmission performance by offloading cert
 
 Extended Berkeley Packet Filter (eBPF) when used with Traffic Control (TC), provides a flexible platform for executing programs in the kernel space, allowing for fast packet processing and forwarding. eBPF is a technology that can run sandboxed programs in the Linux kernel without changing the kernel source code or loading kernel modules. When used with TC, it can classify and take action on network traffic, providing fine-grained control over network packets.
 
-
 ### 2.  Environment Setup <a id="envirsetup"></a>
-
 
 * The `controller` (named as `one-to-rule-them-all` or Muxer) for the whole setup is a regular x86_64-based Desktop-PC (with a Intel i5 750 (4) @ 2.661GHz CPU) , running  on OpenWrt linux distribution ( SNAPSHOT, r24403+283-c23b509d72) and  also as a point of access. The controller has a 10-Gigabit connection to the switch.<br><br>
 
