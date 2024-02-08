@@ -15,7 +15,7 @@
 
 <h3> 1. Problem Definition <a id="problemdefinition"></a></h3>
 <p style="text-align: justify;">
-  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).<br><br>
+  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a <a name="TP-Link WDR4900 v1" src="https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip"/> access point (hereafter referenced as `device`).<br><br>
   * Four packet processing and forwarding techniques are considered in our experiment:-
 </p>
 <h4> IP forwarding:</h4>
@@ -74,6 +74,7 @@ The following are the possible errors during this setup and and operation.<br>
      * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
 <h3> 4.  Confidence Analysis <a id="confianalysis"></a></h3>
+
 <h3> 5.  Experiment Specification <a id="expspecifi"></a></h3>
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol. You can access the collected `tcpdump` output files [here](https://zenodo.org/uploads/new)
   <br> 
@@ -81,7 +82,7 @@ The following are the possible errors during this setup and and operation.<br>
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. <br>
    The script that we used are displayed below and also access those files with this link.[Link Text](https://www.example.com)
 <h3> 7.  Plottting results <a id="plotresults"></a></h3>
-   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques. Based on the calculated numerical measures, we then plot the aggregated statistical measures into a box plot for performance comparison.<br>
+   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.<br>
    
 <h3> 8.  Results <a id="results"></a></h3>
   
