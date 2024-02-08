@@ -99,8 +99,8 @@ Testing and Validation: Conduct regular performance tests under different condit
    
 ### 7.  Plottting results <a id="plotresults"></a>
 
-   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and filter it using the tools [tshark](https://tshark.dev/) and [tcpstat](https://linux.die.net/man/1/tcpstat) and convert it into .csv files. With the help of [python](https://docs.python.org/3/tutorial/index.html) scripting and [matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.
-   
+   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and filter it using the tools such as [tshark](https://tshark.dev/) and [tcpstat](https://linux.die.net/man/1/tcpstat) .After that we converted those trace files into .csv files. With the help of [python](https://docs.python.org/3/tutorial/index.html) scripting and [matplotlib](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.
+
 ### 8.  Results <a id="results"></a>
   The results of our experiment including all the linegraphs and box plots for comparison are available here. [Results]()
 ### 9.  Conclusions <a id="conclusion"></a>
