@@ -65,7 +65,7 @@ The following are the possible errors during this setup and and operation
 
   * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.<br>
   * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.<br>
-  * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.
+  * Configuration changes: Two teams are sharing the same device. So If any changes to the firewall configuration during the experiment may affect the output.
      
 #### Random Errors:<br>
 
