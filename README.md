@@ -103,7 +103,7 @@ The following are the possible errors during this setup and and operation.<br>
    
 ### 7.  Plottting results <a id="plotresults"></a>
 
-   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.
+   For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and filter it using the tools [tshark](https://tshark.dev/) and tcpstat [tcpstat](https://linux.die.net/man/1/tcpstat)and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.
    
 ### 8.  Results <a id="results"></a>
   
