@@ -34,19 +34,19 @@
    * The setup is depicted in the below diagram.<br><br>
      ![GitHub Image](IT.drawio.png)
 ###  3. Error Discussion
-#### Systematic Errors:<br><br>
-     * Setup Mistakes: If your network devices or tools aren’t set up right, they might give you wrong data.<br>
-     * Wrong Normal: If you don’t correctly define what’s “normal” for your network, you might miss problems or see problems where there aren’t any.<br>
-     * Biased Algorithms: The methods you use to analyze traffic might have built-in biases that can twist the results.<br><br>
+#### Systematic Errors:
+     * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.
+     * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.
+     * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.
 #### Random Errors:<br><br>
-     * Sampling Slip-ups: If you’re only looking at a sample of your network traffic, you might get a skewed picture if your sample isn’t a good representation of the whole.<br>
-     * Time Troubles: The time when you collect data can affect what you see. Network traffic can change a lot throughout the day.<br>
-     * Measurement Mix-ups: Problems with your hardware or software can lead to errors in your data.<br><br>
+     * Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample isn’t a good representation of the whole.<br>
+     * Time Troubles: The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.<br>
+     * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.<br><br>
 #### Other Potential Errors:<br><br>
-     * Bad Data: If the data you’re analyzing is missing information, has duplicates, or is recorded wrong, your analysis won’t be accurate.<br>
-     * Changing Threats: Cyber threats are always changing, and your analysis tools might not be able to keep up.<br>
+     * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
+     * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
-###  5.  Confident Analysis
+###  5.  Confidence Analysis
 ###  6.  Experiment Specification
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol.   
 ###  7.  Data Analysis
