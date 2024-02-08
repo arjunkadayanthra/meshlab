@@ -61,15 +61,15 @@
   </p>
 <h3> 3. Error Discussion <a id="errdiscuss"></a></h3>
 The following are the possible errors during this setup and and operation.<br>
-Systematic Errors:<br>
+<h4>Systematic Errors:<br></h4>
      * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.<br>
      * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.<br>
      * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.<br>
-Random Errors:<br><br>
+<h4>Random Errors:<br><br></h4>
      * Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample isn’t a good representation of the whole.<br>
      * Time Troubles: The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.<br>
      * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.<br><br>
-Other Potential Errors:<br><br>
+<h4>Other Potential Errors:<br><br></h4>
      * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
      * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
