@@ -33,8 +33,10 @@
    * iperf3 is a tool that uses a client-server model to generate and transmit data, representing traffic source and sink respectively. It’s started with iperf3 on the server side and  on the client side. For this setupiperf3 is started in separate namespaces for the source and sink. The server listens on all interfaces, and the client connects to the server, transmits data, and both print throughput statistics every second.
    * Next step is to collect the trace. For this we are using the `tcpdump` tool that hooks onto a network interface and captures all incoming and outgoing packets, and can print that on the screen or write in into a pcap file.
    * Inorder to switch between the software and hardware offloading forwarding techniques , change the firewall configuration file (/etc/config/firewall) and for the eBPF (TC) forwarding, we load the prewritten eBPF program.
-   * The setup is depicted in the below diagram.<br><br>
-     ![GitHub Image](IT.drawio.png)
+   * The setup is depicted in the following diagram.<br><br>
+  <p align="center">
+  <img src="IT.drawio.png" alt="GitHub Image">
+  </p>
 ###  3. Error Discussion <a id="errdiscuss"></a>
 #### Systematic Errors:
      * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.
