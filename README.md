@@ -15,7 +15,7 @@
 
 <h3> 1. Problem Definition <a id="problemdefinition"></a></h3>
 <p style="text-align: justify;">
-  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a <a name="TP-Link WDR4900 v1" src="https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip"/> access point (hereafter referenced as `device`).<br><br>
+  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a [TP-Link WDR4900 v1](https://static.tp-link.com/resources/document/TL-WDR4900_V1.0_Datasheet.zip) access point (hereafter referenced as `device`).<br><br>
   * Four packet processing and forwarding techniques are considered in our experiment:-
 </p>
 <h4> IP forwarding:</h4>
