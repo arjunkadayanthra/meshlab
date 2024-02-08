@@ -79,8 +79,10 @@ The following are the possible errors during this setup and and operation.<br>
   <br> 
 <h3> 6.  Data Analysis <a id="dataanalysis"></a></h3>
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. <br>
+   The script that we used are displayed below and also access those files with this link.[Link Text](https://www.example.com)
 <h3> 7.  Plottting results <a id="plotresults"></a></h3>
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques. Based on the calculated numerical measures, we then plot the aggregated statistical measures into a box plot for performance comparison.<br>
+   
 <h3> 8.  Results <a id="results"></a></h3>
   
 <h3> 9.  Conclusions <a id="conclusion"></a></h3>
