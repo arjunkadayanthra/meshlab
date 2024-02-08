@@ -90,7 +90,14 @@ The following are the possible errors during this setup and and operation.<br>
   * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.
      
 ### 4.  Confidence Analysis <a id="confianalysis"></a>
-
+* Hardware Configuration: The TP-Link WDR4900 v1 router is equipped with an 800MHz Freescale PPC P1014 CPU and supports both 2.4 GHz and 5 GHz bands. Your controller, powered by an i7 processor, is running the OpenWrt Linux distribution, which is known for its flexibility and performance optimization capabilities.
+* Bandwidth Estimation: Bandwidth is a critical factor in network performance. It’s the maximum rate of data transfer across a given path. Monitor the bandwidth usage over time to understand the capacity of your network setup.
+* Network Traffic Analysis: Analyze the type and amount of traffic passing through the router. High network traffic can lead to congestion and reduced bandwidth. Tools like iftop or nload on your OpenWrt system can provide real-time network traffic statistics.
+* Quality of Service (QoS): If your network handles various types of traffic, consider configuring QoS rules on your router. QoS can prioritize certain types of traffic and optimize the bandwidth usage.
+* Performance Metrics: Monitor key performance metrics such as latency, packet loss, and jitter. These metrics can provide insights into the quality of the network connection.
+* External Factors: Consider external factors such as the physical placement of the router and potential interference sources. These factors can impact the signal strength and thus the network performance.
+* Offload States: Offloading can improve performance by allowing the network device to bypass the kernel when sending packets. However, it’s important to note that not all processes can be offloaded.
+Testing and Validation: Conduct regular performance tests under different conditions to validate the network setup. Tools like iperf can help with this.
 
 ### 5.  Experiment Specification <a id="expspecifi"></a>
 
@@ -99,14 +106,14 @@ The following are the possible errors during this setup and and operation.<br>
 ### 6.  Data Analysis <a id="dataanalysis"></a>
 
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. <br>
-   The script that we used are displayed below and also access those files with this link. [Link Text](https://www.example.com)
+   The script that we used are displayed below and also access those files with this link. [Python Scripts](https://www.example.com)
    
 ### 7.  Plottting results <a id="plotresults"></a>
 
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and filter it using the tools [tshark](https://tshark.dev/) and [tcpstat](https://linux.die.net/man/1/tcpstat) and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques for both protocols (TCP and UDP). Based on the calculated numerical measures, we then plotted the aggregated statistical measures into a box plot for performance comparison.
    
 ### 8.  Results <a id="results"></a>
-  
+  The results of our experiment including all the linegraphs and box plots for comparison are available here. [Results]()
 ### 9.  Conclusions <a id="conclusion"></a>
 
    * Justification
