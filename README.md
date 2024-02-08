@@ -15,8 +15,8 @@
 
 <h3> 1. Problem Definition <a id="problemdefinition"></a></h3>
 <p style="text-align: justify;">
-  * The objective of this project is to measure and analyze the performance of different network packet forwarding techniques on a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).<br>
-  * There are four packet forwarding techniques are conducting in our experiment:-
+  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).<br>
+  * Four packet processing and forwarding techniques are considered in our experiment:-
 </p>
 <h4> IP forwarding:</h4>
 <p style="text-align: justify;">
