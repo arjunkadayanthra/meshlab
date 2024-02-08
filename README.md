@@ -33,15 +33,29 @@
    * Inorder to switch between the software and hardware offloading forwarding techniques , change the firewall configuration file (/etc/config/firewall) and for the eBPF (TC) forwarding, we load the prewritten eBPF program.
    * The setup is depicted in the below diagram.<br><br>
      ![GitHub Image](IT.drawio.png)
-###  3.  Experiment Specification
+###  3. Error Discussion
+Systematic Errors:
+     - Setup Mistakes: If your network devices or tools aren’t set up right, they might give you wrong data.
+     - Wrong Normal: If you don’t correctly define what’s “normal” for your network, you might miss problems or see problems where there aren’t any.
+     - Biased Algorithms: The methods you use to analyze traffic might have built-in biases that can twist the results.
+Random Errors:
+     - Sampling Slip-ups: If you’re only looking at a sample of your network traffic, you might get a skewed picture if your sample isn’t a good representation of the whole.
+     - Time Troubles: The time when you collect data can affect what you see. Network traffic can change a lot throughout the day.
+     - Measurement Mix-ups: Problems with your hardware or software can lead to errors in your data.
+Other Potential Errors:
+     - Bad Data: If the data you’re analyzing is missing information, has duplicates, or is recorded wrong, your analysis won’t be accurate.
+     - Changing Threats: Cyber threats are always changing, and your analysis tools might not be able to keep up.
+     - Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.
+###  5.  Confident Analysis
+###  5.  Experiment Specification
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol.   
-###  4.  Data Analysis
+###  6.  Data Analysis
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. 
-###  5.  Plottting results
+###  7.  Plottting results
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques. Based on the calculated numerical measures, we then plot the aggregated statistical measures into a box plot for performance comparison.
-###  6.  Results
+###  8.  Results
   
-###  7.  Conclusions
+###  9.  Conclusions
    * Justification
 
 
