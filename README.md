@@ -55,7 +55,7 @@ Extended Berkeley Packet Filter (eBPF) when used with Traffic Control (TC), prov
 * The setup is depicted in the following diagram.<br>
 
   <p align="center">
-  <img src="IT.drawio1.png" alt="GitHub Image">
+  <img src="IT.drawio2.png" alt="GitHub Image">
   
 ### 3. Error Discussion <a id="errdiscuss"></a>
 
