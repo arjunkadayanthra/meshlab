@@ -2,16 +2,18 @@
 
 
 ###  Table of Contents
-1.  Problem definition
-2.  Environment Setup
-3.  Experiment Specification
-4.  Data Analysis
-5.  Plottting results
-6.  Results
-7.  Conclusions
+1.  [Problem definition](#problemdefinition)
+2.  [Environment Setup](#envirsetup)
+3.  [Error Discussion](#errdiscuss)
+4.  [Confidence Analysis](#confianalysis)
+5.  [Experiment Specification](#expspecifi)
+6.  [Data Analysis](#dataanalysis)
+7.  [Plottting results](#plotresults)
+8.  [Results](#results)
+9.  [Conclusions](#conclusion)
 
 
-###  1.  Problem Definition
+#### 1. Problem Definition <a id="problemdefinition"></a>
   * The objective of this project is to measure and analyze the performance of different network packet forwarding techniques on a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).
   * There are four packet forwarding techniques
 ####  - IP forwarding: 
@@ -22,7 +24,7 @@
       This method improves transmission performance by offloading certain data forwarding tasks from the software to the hardware, allowing for faster packet routing.
 ####  - eBPF (TC):
       eBPF, when used with Traffic Control (TC) provides a flexible platform for executing programs in the kernel space, allowing for fast packet processing and forwarding.
-###  2.  Environment Setup
+###  2.  Environment Setup <a id="envirsetup"></a>
    * The controller (named as `one-to-rule-them-all` or Muxer) for the whole setup is a regular x86_64-based Desktop-PC (with a Intel i5 750 (4) @ 2.661GHz CPU) , running  on OpenWrt linux distribution ( SNAPSHOT, r24403+283-c23b509d72) and  also as a point of access. The controller has a 10-Gigabit connection to the switch.
    * The `device` is connected with two cables to the same switch to which the controller is also connected, thus they are in a network. To separate all the other devices and it's networks from each other, they are grouped into VLANs. The controller has access to all of these VLANs, and thus has a connection to the `device` (using a virtual interface). Every connection between a `device` and the controller gets its own unique set of IP addresses, and there’s a list that shows which of these addresses are used by the devices and the controller’s virtual interfaces.
    * Our team(team5) has a unique ssh key that it can use to access the `device`. This key is used along with the device’s IP address and the username ‘root’ to connect to the device. An SSH config entry has also been set up  in the `controller` to make this process easier.
@@ -33,7 +35,7 @@
    * Inorder to switch between the software and hardware offloading forwarding techniques , change the firewall configuration file (/etc/config/firewall) and for the eBPF (TC) forwarding, we load the prewritten eBPF program.
    * The setup is depicted in the below diagram.<br><br>
      ![GitHub Image](IT.drawio.png)
-###  3. Error Discussion
+###  3. Error Discussion <a id="errdiscuss"></a>
 #### Systematic Errors:
      * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.
      * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.
@@ -46,16 +48,16 @@
      * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
      * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
-###  5.  Confidence Analysis
-###  6.  Experiment Specification
+###  4.  Confidence Analysis <a id="confianalysis"></a>
+###  5.  Experiment Specification <a id="expspecifi"></a>
   We have planned to conduct each forwarding techniques 10 iterations with a duration of 60 seconds and by using TCP and UDP data transmission protocol. So in total the number of `tcpdump` output files are 40 numbers in each protocol.   
-###  7.  Data Analysis
+###  6.  Data Analysis <a id="dataanalysis"></a>
    For performance analysis we use python scripting. Mean, median and standard deviations are the numerical measurements that we have used. 
-###  8.  Plottting results
+###  7.  Plottting results <a id="plotresults"></a>
    For plotting the results, first we have extracted the necessary fields such as timestamp and bitrate from the individual trace files and convert it into .csv files. With the help of python script and matpolib libraries, we have plotted the individual iterations into line graphs and calculated the mean, meadian and standard deviations for each packet forwarding techniques. Based on the calculated numerical measures, we then plot the aggregated statistical measures into a box plot for performance comparison.
-###  9.  Results
+###  8.  Results <a id="results"></a>
   
-###  10.  Conclusions
+###  9.  Conclusions <a id="conclusion"></a>
    * Justification
 
 
