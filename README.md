@@ -15,7 +15,7 @@
 
 <h3> 1. Problem Definition <a id="problemdefinition"></a></h3>
 <p style="text-align: justify;">
-  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).<br>
+  * The objective of this project is to measure and analyze the performance of different network packet processing and forwarding techniques through a TP-Link WDR4900 v1 access point (hereafter referenced as `device`).<br><br>
   * Four packet processing and forwarding techniques are considered in our experiment:-
 </p>
 <h4> IP forwarding:</h4>
@@ -60,15 +60,16 @@
   <img src="IT.drawio.png" alt="GitHub Image">
   </p>
 <h3> 3. Error Discussion <a id="errdiscuss"></a></h3>
-#### Systematic Errors:<br>
+The following are the possible errors during this setup and and operation.<br>
+Systematic Errors:<br>
      * Setup Mistakes: If the network devices or tools aren’t set up right, they might give  wrong data.<br>
      * Wrong Normal: If don’t correctly define what’s “normal” for the network, then it might miss problems or see problems where there aren’t any.<br>
      * Biased Algorithms: The methods we use to analyze traffic might have built-in biases that can twist the results.<br>
-#### Random Errors:<br><br>
+Random Errors:<br><br>
      * Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample isn’t a good representation of the whole.<br>
      * Time Troubles: The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.<br>
      * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.<br><br>
-#### Other Potential Errors:<br><br>
+Other Potential Errors:<br><br>
      * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis won’t be accurate.<br>
      * Changing Threats: Cyber threats are always changing, and our analysis tools might not be able to keep up.<br>
      * Encryption Issues: As more network traffic gets encrypted, it’s harder to analyze for potential threats.<br><br>
