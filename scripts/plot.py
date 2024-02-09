@@ -43,7 +43,7 @@ def plot_mode_subs(cur_mode, cur_prot):
     num_rows = (num_files + num_cols - 1) // num_cols
     fig, axs = plt.subplots(nrows=num_rows, ncols=num_cols, figsize=(5 * num_cols, 4 * num_rows),
                             constrained_layout=True)
-    fig.suptitle(f"Bit rate v/s time for mode : {desc}")
+    fig.suptitle(f"Bit rate v/s time for mode : {desc} ({cur_prot.upper()})")
     fig.supylabel(BIT_RATE_MBPS)
     fig.supxlabel(TIME_SECONDS)
     for i, file in enumerate(files):
@@ -109,7 +109,7 @@ def plot_mode_aggregates(cur_mode, cur_prot, bitrate_all):
     fig.add_trace(
         go.Scatter(x=aggregated_df.index, y=aggregated_df[0], mode='lines+markers', name='Aggregated Bit Rate'))
 
-    fig.update_layout(title=f'Aggregated bit rate over time for {desc}',
+    fig.update_layout(title=f'Aggregated bit rate over time for {desc} ({cur_prot.upper()})',
                       xaxis_title=TIME_SECONDS,
                       yaxis_title=BIT_RATE_MBPS,
                       xaxis=dict(title_standoff=20),
