@@ -152,8 +152,6 @@ Following are the possible errors during the setup and experiments.
 
 #### Data Errors:
 
-* Sampling Slip-ups: If we only looking at a sample of our network traffic, we might get a skewed picture if our sample
-  isn’t a good representation of the whole.
 * Timing : The time when we collect data can affect what we see. Network traffic can change a lot throughout the day.
 * Measurement Mix-ups: Problems with our hardware or software can lead to errors in our data.
 * Bad Data: If the data we are analyzing is missing information, has duplicates, or is recorded wrong, then our analysis
