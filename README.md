@@ -105,7 +105,25 @@ The following are the possible errors during this setup and and operation
   The results of our experiment including all the line graphs and box plots for comparison are available here. [Results]()
 ### 9.  Conclusions <a id="conclusion"></a>
 
-   * Justification
+Let's summarize the performance of the four packet processing and forwarding mechanisms:
+- IP Forwarding
+    - TCP: 214.5 Mbps
+    - UDP: 560.1 Mbps
+- IP Forwarding with Software Offloading
+    - TCP: 281.6 Mbps (an increase of about 31.2% from IP Forwarding)
+    - UDP: 924.7 Mbps (an growth of approximately 65.1% from IP Forwarding)
+- IP Forwarding with Hardware Offloading
+    - TCP: 293.2 Mbps (an increase of approximately 4.1% from IP Forwarding with Software Offloading)
+    - UDP: 936.6 Mbps (an growth of about 1.Three% from IP Forwarding with Software Offloading)
+- eBPF (TC)
+    - TCP: 284.9 Mbps (a lower of approximately 2.8% from IP Forwarding with Hardware Offloading)
+    - UDP: 965.Eight Mbps (an growth of approximately 3.1% from IP Forwarding with Hardware Offloading)
+
+From those effects, we will finish that for each TCP and UDP, IP Forwarding with Hardware Offloading and eBPF (TC) provide the very best performance. However, the precise desire between these two would rely upon different factors including the unique necessities of the network and the talents of hardware. It’s additionally crucial to notice that whilst UDP gives higher bandwidth, it does not have the equal reliability and ordering ensures as TCP. Therefore, the selection between TCP and UDP might also depend upon the precise wishes of your application.
+
+In phrases of development from one mechanism to the next, the maximum sizable leap in performance for both TCP and UDP is seen when transferring from IP Forwarding to IP Forwarding with Software Offloading. The next upgrades whilst shifting to IP Forwarding with Hardware Offloading and eBPF (TC) are much less said. This shows that at the same time as offloading (both software program and hardware) and eBPF (TC) can offer overall performance advantages, the most substantial improvement is received from the preliminary pass to software program offloading.
+
+It’s also well worth noting that the performance decrease determined whilst moving from IP Forwarding with Hardware Offloading to eBPF (TC) in the case of TCP isn't always discovered in UDP. This may want to advocate that eBPF (TC) is particularly nicely-acceptable to UDP visitors.
 
 
 
